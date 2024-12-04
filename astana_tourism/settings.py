@@ -58,8 +58,12 @@ import dj_database_url
 # Database
 DATABASES = {
     'default': dj_database_url.config(
-        default="postgresql://postgres:vmHWhDmJBuJyDTgbYtsFKGKCXRttlFpc@postgres.railway.internal:5432/railway",
-        conn_max_age=600
+        default=os.getenv(
+            'DATABASE_URL',
+            # Use external URL here for local development
+            'postgresql://postgres:vmHWhDmJBuJyDTgbYtsFKGKCXRttlFpc@postgres.railway.internal:5432/railway'
+        ),
+        conn_max_age=600,
     )
 }
 
