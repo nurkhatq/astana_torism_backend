@@ -1,0 +1,1 @@
+web: gunicorn astana_tourism.wsgi
