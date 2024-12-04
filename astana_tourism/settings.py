@@ -71,9 +71,21 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # CORS configuration
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://192.168.1.25:3000"
+    "http://192.168.1.25:3000",
+    "https://astana-tourism.vercel.app",
+    "https://web-production-6fb7.up.railway.app"
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "https://astana-tourism.vercel.app",
+    "https://web-production-6fb7.up.railway.app"
+]
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'Lax'
+SESSION_COOKIE_SAMESITE = 'Lax'
 
 TEMPLATES = [
     {
