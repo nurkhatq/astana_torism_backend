@@ -1,0 +1,146 @@
+[
+{
+  "model": "places.review",
+  "pk": 17,
+  "fields": {
+    "place": 41,
+    "user": 1,
+    "rating": 5,
+    "comment": "n",
+    "created_at": "2024-11-23T21:10:02.919Z",
+    "updated_at": "2024-11-23T21:10:02.919Z"
+  }
+},
+{
+  "model": "places.review",
+  "pk": 18,
+  "fields": {
+    "place": 43,
+    "user": 1,
+    "rating": 5,
+    "comment": "dvd",
+    "created_at": "2024-11-23T21:13:31.467Z",
+    "updated_at": "2024-11-23T21:13:31.467Z"
+  }
+},
+{
+  "model": "places.review",
+  "pk": 19,
+  "fields": {
+    "place": 44,
+    "user": 1,
+    "rating": 5,
+    "comment": "n m,",
+    "created_at": "2024-11-23T21:18:54.673Z",
+    "updated_at": "2024-11-23T21:18:54.673Z"
+  }
+},
+{
+  "model": "places.review",
+  "pk": 21,
+  "fields": {
+    "place": 42,
+    "user": 1,
+    "rating": 5,
+    "comment": "mkm",
+    "created_at": "2024-11-23T21:21:12.320Z",
+    "updated_at": "2024-11-23T21:21:12.320Z"
+  }
+},
+{
+  "model": "places.review",
+  "pk": 23,
+  "fields": {
+    "place": 59,
+    "user": 1,
+    "rating": 5,
+    "comment": "sdfd",
+    "created_at": "2024-11-23T21:42:03.948Z",
+    "updated_at": "2024-11-23T21:42:03.948Z"
+  }
+},
+{
+  "model": "places.review",
+  "pk": 24,
+  "fields": {
+    "place": 60,
+    "user": 1,
+    "rating": 5,
+    "comment": "hh",
+    "created_at": "2024-11-23T21:46:25.952Z",
+    "updated_at": "2024-11-23T21:46:25.952Z"
+  }
+},
+{
+  "model": "places.review",
+  "pk": 25,
+  "fields": {
+    "place": 58,
+    "user": 1,
+    "rating": 5,
+    "comment": "good place",
+    "created_at": "2024-11-23T21:58:46.523Z",
+    "updated_at": "2024-11-23T21:58:46.523Z"
+  }
+},
+{
+  "model": "places.review",
+  "pk": 26,
+  "fields": {
+    "place": 41,
+    "user": 4,
+    "rating": 5,
+    "comment": "too",
+    "created_at": "2024-11-23T21:59:18.912Z",
+    "updated_at": "2024-11-23T21:59:18.912Z"
+  }
+},
+{
+  "model": "places.review",
+  "pk": 27,
+  "fields": {
+    "place": 48,
+    "user": 1,
+    "rating": 5,
+    "comment": "good",
+    "created_at": "2024-12-02T20:19:31.553Z",
+    "updated_at": "2024-12-02T20:19:31.554Z"
+  }
+},
+{
+  "model": "places.review",
+  "pk": 28,
+  "fields": {
+    "place": 190,
+    "user": 1,
+    "rating": 5,
+    "comment": "jjjj",
+    "created_at": "2024-12-04T08:53:33.754Z",
+    "updated_at": "2024-12-04T08:53:33.754Z"
+  }
+},
+{
+  "model": "places.review",
+  "pk": 29,
+  "fields": {
+    "place": 193,
+    "user": 1,
+    "rating": 4,
+    "comment": "eeee",
+    "created_at": "2024-12-04T09:01:09.284Z",
+    "updated_at": "2024-12-04T09:01:09.284Z"
+  }
+},
+{
+  "model": "places.review",
+  "pk": 30,
+  "fields": {
+    "place": 47,
+    "user": 1,
+    "rating": 5,
+    "comment": "dfdf",
+    "created_at": "2024-12-04T09:20:52.082Z",
+    "updated_at": "2024-12-04T09:20:52.083Z"
+  }
+}
+]
