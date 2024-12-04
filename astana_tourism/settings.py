@@ -52,16 +52,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'astana_tourism.urls'
-
+import dj_database_url
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'astana_tourism'),
-        'USER': os.getenv('DB_USER', 'postgres'),
-        'PASSWORD': os.getenv('DB_PASSWORD', '0000'),
-        'HOST': os.getenv('DB_HOST', 'localhost'),
-        'PORT': os.getenv('DB_PORT', '5432'),
-    }
+    'default': dj_database_url.config(
+        default="postgresql://postgres:vmHWhDmJBuJyDTgbYtsFKGKCXRttlFpc@postgres.railway.internal:5432/railway",
+        conn_max_age=600
+    )
 }
 
 # Media files configuration
