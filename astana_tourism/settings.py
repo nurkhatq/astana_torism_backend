@@ -97,6 +97,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 GOOGLE_PLACES_API_KEY = 'AIzaSyBHQ_sAOG7Nndu5soo5lAp6KDDRZIv4EBg'
 
 
+WSGI_APPLICATION = 'astana_tourism.wsgi.application'
 # REST Framework settings
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
