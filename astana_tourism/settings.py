@@ -60,12 +60,16 @@ import dj_database_url
 # Database
 DATABASE_URL = "postgres://postgres:YFxorGsFlhatIjFeMgPZEgXOjQNKbodX@autorack.proxy.rlwy.net:13517/railway"
 DATABASES = {
-    'default': dj_database_url.config(
-        default=DATABASE_URL,
-        conn_max_age=600,
-        ssl_require=True
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'YFxorGsFlhatIjFeMgPZEgXOjQNKbodX',
+        'HOST': 'autorack.proxy.rlwy.net',
+        'PORT': '13517',  # 5432 is the default PostgreSQL port
+    }
 }
+
 
 
 # Media files configuration
