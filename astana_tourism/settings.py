@@ -57,14 +57,16 @@ import dj_database_url
 
 # Database
 
-DATABASE_URL = "postgresql://postgres:YFxorGsFlhatIjFeMgPZEgXOjQNKbodX@postgres-r0l8.railway.internal:5432/railway"
+# Database
+DATABASE_URL = "postgres://postgres:YFxorGsFlhatIjFeMgPZEgXOjQNKbodX@autorack.proxy.rlwy.net:13517/railway"
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL'),
+        default=DATABASE_URL,
         conn_max_age=600,
         ssl_require=True
     )
 }
+
 
 # Media files configuration
 MEDIA_URL = '/media/'
