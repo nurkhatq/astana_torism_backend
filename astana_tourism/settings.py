@@ -57,7 +57,7 @@ import dj_database_url
 
 # Database
 
-DATABASE_URL = "postgresql://postgres:vmHWhDmJBuJyDTgbYtsFKGKCXRttlFpc@autorack.proxy.rlwy.net:22875/railway"
+DATABASE_URL = "postgresql://postgres:YFxorGsFlhatIjFeMgPZEgXOjQNKbodX@postgres-r0l8.railway.internal:5432/railway"
 DATABASES = {
     'default': dj_database_url.config(
         default=DATABASE_URL,
