@@ -1,1 +1,1 @@
-web: gunicorn astana_tourism.wsgi
+web: gunicorn astana_tourism.wsgi --log-file -
