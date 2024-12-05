@@ -38,8 +38,16 @@ INSTALLED_APPS = [
     # Local apps
     'places',
     'users',
+    'cloudinary_storage',
+    'cloudinary',
 ]
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dmcog8ycx',
+    'API_KEY': '572624932515329',
+    'API_SECRET': '-zfXHkez0BpUIE14uqPhklK4h4M'
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

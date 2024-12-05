@@ -1,27 +1,28 @@
-# places/management/commands/export_data.py
-from django.core.management.base import BaseCommand
-from django.core import serializers
-import json
-from places.models import Place, Review  # Import your models
-from users.models import User  # Import your user model
+import os
+import sys
+from django.core.management import call_command
+import django
 
-class Command(BaseCommand):
-    help = 'Export data with proper UTF-8 encoding'
+# Set UTF-8 encoding for stdout
+sys.stdout.reconfigure(encoding='utf-8')
 
-    def handle(self, *args, **options):
-        # Export Places
-        places = Place.objects.all()
-        with open('places_data.json', 'w', encoding='utf-8') as f:
-            serializers.serialize('json', places, stream=f, ensure_ascii=False, indent=2)
+# Add the project directory to sys.path
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..'))
+sys.path.append(project_root)
 
-        # Export Reviews
-        reviews = Review.objects.all()
-        with open('reviews_data.json', 'w', encoding='utf-8') as f:
-            serializers.serialize('json', reviews, stream=f, ensure_ascii=False, indent=2)
+# Set the environment variable for Django settings
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'astana_tourism.settings')
 
-        # Export Users (if needed)
-        users = User.objects.all()
-        with open('users_data.json', 'w', encoding='utf-8') as f:
-            serializers.serialize('json', users, stream=f, ensure_ascii=False, indent=2)
+# Initialize Django
+django.setup()
 
-        self.stdout.write(self.style.SUCCESS('Successfully exported data'))
+def export_data():
+    # Export as JSON fixtures with UTF-8 encoding
+    with open('all_data.json', 'w', encoding='utf-8') as out:
+        call_command('dumpdata', '--exclude', 'auth.permission', '--exclude', 'contenttypes', 
+                     '--exclude', 'admin.logentry', '--indent', '2', 
+                     stdout=out, format='json')
+
+if __name__ == '__main__':
+    export_data()
+    print("Data exported successfully to all_data.json")
