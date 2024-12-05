@@ -121,7 +121,6 @@ TEMPLATES = [
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 GOOGLE_PLACES_API_KEY = 'AIzaSyBHQ_sAOG7Nndu5soo5lAp6KDDRZIv4EBg'
 
 
